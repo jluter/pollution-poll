@@ -1,0 +1,31 @@
+@use '../../styles/variables' as *;
+
+
+.header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    background-color: $pp-cream;
+
+    
+    &__logo {
+        max-height: 2rem;
+        max-height: 2rem;
+        margin: 0 2rem;
+    }
+
+    &__nav-bar {
+        display: flex;
+        margin-left: auto;
+        margin-right: 2rem;
+    }
+    
+    &__list {
+        display: flex;
+        gap: 2rem;
+    }
+
+    &__items {
+        list-style-type: none;
+    }
+}
