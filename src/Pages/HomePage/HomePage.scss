@@ -1,7 +1,7 @@
 @use '../../styles/variables' as *;
 
-.money-input-form {
+.home-page {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    align-items: center;
 }

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import axios from "axios";
+// import axios from "axios";
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import HomePage from './Pages/HomePage';
+import HomePage from "./Pages/HomePage/HomePage";
 import Header from "./Components/Header/Header";
 import './App.scss';
 
