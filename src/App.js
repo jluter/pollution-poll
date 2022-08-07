@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import HomePage from "./Pages/HomePage/HomePage";
 import Header from "./Components/Header/Header";
+import PollutionPollPage from "./Pages/PollutionPollPage/PollutionPollPage";
 import './App.scss';
 
 class App extends Component {
@@ -31,14 +32,17 @@ class App extends Component {
   //         .catch((error) => console.log(error)) 
   // }
 
-
+  handleLogoClick = () => {
+    this.props.history.push("/")
+  }
 
   render() {
     return (
       <Router>
-        <Header />
+        <Header handleLogoClick={this.handleLogoClick}/>
         <Switch>
           <Route path="/" exact component={HomePage}/>
+          <Route path="/pollutionpoll" component={PollutionPollPage}/>
         </Switch>
       </Router>
     );

@@ -2,6 +2,8 @@ import React from "react";
 import "./MoneyInputForm.scss";
 
 const MoneyInputForm = (props) => {
+
+
   return (
     <>
     <form
@@ -9,7 +11,19 @@ const MoneyInputForm = (props) => {
         event.preventDefault();
         console.log(event)
 
-        props.handleFormSubmit(parseInt(event.target[1].value), event.target[0].value, event.target[2].value);
+        const estimationBillArray = [];
+
+        for (let i=1; i < event.target.length; i++) {
+          if (event.target[i].value) {
+            let targetValue = parseInt(event.target[i].value);
+            let estimationBillObject = {estimationName: event.target[i].id, 
+            estimationValue: targetValue}
+  
+            estimationBillArray.push(estimationBillObject);
+          }
+        }
+
+        props.handleFormSubmit(event.target[0].value, estimationBillArray);
       }}
       id="money-input-form"
       type="submit"
@@ -31,9 +45,12 @@ const MoneyInputForm = (props) => {
 
       <label htmlFor="water-money">What is your monthly water bill?</label>
       <input type="number" id="water-money"></input>
-      <button type="submit">CO2e Estimation</button>
+
+      <label htmlFor="water-money">What is your weekly gas bill?</label>
+      <input type="number" id="gas-money"></input>
+      <button id="form-submit-button" type="submit">CO2e Estimation</button>
     </form>
-    <h1>{props.test}</h1>
+    {props.sumEmissions ? <h1>{props.sumEmissions} </h1> : console.log("awaiting input")}
     </>
   );
 };
