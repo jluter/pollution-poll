@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import axios from "axios";
 import "./PollutionPollPage.scss";
+import Header from "../../Components/Header/Header";
 import MoneyInputForm from "../../Components/MoneyInputForm/MoneyInputForm";
+import EmissionResults from '../../Components/EmissionResults/EmissionResults';
 
 class PollutionPollPage extends Component {
     state = {
@@ -12,31 +14,6 @@ class PollutionPollPage extends Component {
         emissionArray: null,
         sumEmissions: null,
       };
-    
-      // axiosPostRequest = (emissionFactorId, energyBillInput) => {
-      //   axios
-      //       .post(
-      //         "https://beta3.api.climatiq.io/estimate",
-      //           {
-      //             emission_factor: {
-      //               uuid: emissionFactorId,
-      //             },
-      //             parameters: {
-      //               money: energyBillInput,
-      //               money_unit: "usd",
-      //             }
-      //           },
-      //         {
-      //           headers: { Authorization: "Bearer FJE2K0K7BEMEYRPAPGEW2EHY53PM" },
-      //         })
-      //         .then((response) => {
-      //           console.log(response.data);
-      //           this.setState({
-      //             test: response.data.co2e
-      //           })
-      //         })
-      //         .catch((error) => console.log(error))
-      // }
     
     
       handleFormSubmit = (energySource, estimationBillArray) => {
@@ -60,9 +37,19 @@ class PollutionPollPage extends Component {
         })
         .catch(error => console.log(error))
       };
+
+      // componentDidMount() {
+      //   axios
+      //   .get("http://localhost:4444/waterBills")
+      //   .then(response => {
+      //     this.setState({
+      //       waterBills: response.data
+      //     })
+      //   })
+      // }
     
       componentDidUpdate(prevProps, prevState) {
-        if (prevState.energyBill !== this.state.energyBill)
+        if (prevState.energyBill !== this.state.energyBill) {
         this.state.energySourceId
           ? axios
             .post(
@@ -119,67 +106,31 @@ class PollutionPollPage extends Component {
             })
             .catch((error) => console.log(error))
           : console.log("Awaiting Input...");
+        } 
       }
-    
-      // componentDidUpdate(prevProps) {
-    
-      //     this.state.energySourceId
-      //     ? axios
-      //       .post(
-      //         "https://beta3.api.climatiq.io/batch",
-      //           [{
-      //             emission_factor: {
-      //               uuid: this.state.energySourceId,
-      //             },
-      //             parameters: {
-      //               money: this.state.energyBill,
-      //               money_unit: "usd",
-      //             }
-      //           },
-      //           {
-      //             emission_factor: {
-      //               uuid: "1eed671c-7e3d-44e2-85f5-57dc86372cea",
-      //             },
-      //             parameters: {
-      //               money: this.state.waterBill, //Placeholder
-      //               money_unit: "usd",
-      //             }
-      //           },
-      //           {
-      //             emission_factor: {
-      //               uuid: "bcc20692-49f0-42cc-9ef9-3133769c6d45",
-      //             },
-      //             parameters: {
-      //               money: this.state.gasBill, //Placeholder
-      //               money_unit: "usd",
-      //             }
-      //           },
-      //         ],
-      //         {
-      //           headers: { Authorization: "Bearer FJE2K0K7BEMEYRPAPGEW2EHY53PM" },
-      //         }
-      //       )
-      //       .then((response) => {
-      //         console.log(response.data);
-      //         this.setState({
-      //           emissionArray: response.data
-      //         })
-      //       })
-      //       .catch((error) => console.log(error))
-      //     : console.log("Loading...");
-      // }
-    
+
+      handleLogoClick = () => {
+        console.log(this.props)
+        this.props.history.push("/")
+      }
       render() {
         return (
+          <>
+          <Header handleLogoClick={this.handleLogoClick}/>
           <main className="home-page">
             <h1>Pollution Poll</h1>
-            <MoneyInputForm 
+            {!this.state.sumEmissions && <MoneyInputForm 
               handleFormSubmit={this.handleFormSubmit}
               emissions={this.state.emissionArray} 
               state={this.state}
-              sumEmissions={this.state.sumEmissions}
-            />
+            />}
+            {this.state.sumEmissions && 
+            <EmissionResults 
+              sumEmission={this.state.sumEmissions} 
+              emissionArray={this.state.emissionArray}
+            />}
           </main>
+          </>
         );
       }
 };

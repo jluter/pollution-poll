@@ -1,11 +1,12 @@
 import React from 'react';
 import './Header.scss';
 import logo from '../../assets/images/pollution-poll-icon.ico';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import {BiPoll}  from 'react-icons/bi';
 
 
 const Header = (props) => {
+
     return (
         <header className='header'>
             <img onClick={() => {props.handleLogoClick()}} className="header__logo" src={logo} alt="Pollution Poll logo"/>
@@ -14,12 +15,12 @@ const Header = (props) => {
                     <button className='dropdown__button'> 
                         <BiPoll className='dropdown__bipoll'/>
                     <div className='dropdown__list'>
-                        <Link 
+                        <NavLink 
                         to="/"
-                        className='dropdown__list--item'>Home</Link>
-                        <Link 
+                        className='dropdown__list--item'>Home</NavLink>
+                        <NavLink 
                         to="/pollutionpoll"
-                        className='dropdown__list--item'>Pollution Poll</Link>
+                        className='dropdown__list--item'>Pollution Poll</NavLink>
                     </div>
                     </button>
                 </div>
