@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './EmissionResults.scss';
+import Sources from '../Sources/Sources';
 
 const EmissionResults = (props) => {
 
-    console.log(props)
+    // console.log(props)
     const yearEmissions = parseInt((props.sumEmission * 12).toFixed(2));
     const formattedEmissions = yearEmissions.toLocaleString("en-US");
     
@@ -61,13 +62,14 @@ const EmissionResults = (props) => {
                     </section>
                     <section className='compare__chart'>
                         <div>Average</div>
-                        <div>Average Energy</div>
-                        <div>Average Water</div>
-                        <div>Average Fuel</div>
-                        <div>Average Total</div>
+                        <div>Average Energy: 5,308.56kg CO2e</div>
+                        <div>Average Water: 289.2kg CO2e</div>
+                        <div>Average Fuel: 4,600kg CO2e</div>
+                        <div>Average Total: 10,197.76kg CO2e</div>
                     </section>
                 </div>
             </article>
+            <Sources />
         </main>
     );
 };

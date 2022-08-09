@@ -10,9 +10,9 @@ class PollutionPollPage extends Component {
         energyBill: null,
         energySourceId: null,
         waterBill: null,
-        gasBill: null,
         emissionArray: null,
         sumEmissions: null,
+        gallonsBought: null,
       };
     
     
@@ -22,31 +22,22 @@ class PollutionPollPage extends Component {
         .get("http://localhost:4444/activity")
         .then((response) => {
           const energyActivity = response.data.find(activity => activity.activityName === "energy")
-          // const waterActivity = response.data.find(activity => activity.activityName === "water")
-          // const fuelActivity = response.data.find(activity => activity.activityName === "fuel")
     
     
           const activity = energyActivity.activityId.find(activity => activity.name === energySource)
-    
+          console.log(estimationBillArray)
+
+          const gallonsBought = (estimationBillArray[3].estimationValue)/(estimationBillArray[2].estimationValue)
           this.setState({
             energyBill: estimationBillArray[0].estimationValue,
             energySourceId: activity.id,
             waterBill: estimationBillArray[1].estimationValue,
-            gasBill: estimationBillArray[2].estimationValue
+            gallonsBought: gallonsBought
           });
         })
         .catch(error => console.log(error))
       };
 
-      // componentDidMount() {
-      //   axios
-      //   .get("http://localhost:4444/waterBills")
-      //   .then(response => {
-      //     this.setState({
-      //       waterBills: response.data
-      //     })
-      //   })
-      // }
     
       componentDidUpdate(prevProps, prevState) {
         if (prevState.energyBill !== this.state.energyBill) {
@@ -68,17 +59,17 @@ class PollutionPollPage extends Component {
                     uuid: "1eed671c-7e3d-44e2-85f5-57dc86372cea",
                   },
                   parameters: {
-                    money: this.state.waterBill, //Placeholder
+                    money: this.state.waterBill, 
                     money_unit: "usd",
                   }
                 },
                 {
                   emission_factor: {
-                    uuid: "bcc20692-49f0-42cc-9ef9-3133769c6d45",
+                    uuid: "3b0b346e-27b0-4e11-97fb-a4b55c7f6f1f",
                   },
                   parameters: {
-                    money: this.state.gasBill, //Placeholder
-                    money_unit: "usd",
+                    volume: this.state.gallonsBought, 
+                    volume_unit: "gallon_us",
                   }
                 },
               ],

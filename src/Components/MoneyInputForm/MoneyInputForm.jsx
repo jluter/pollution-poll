@@ -46,6 +46,9 @@ const MoneyInputForm = (props) => {
       <label htmlFor="water-money">What is your monthly water bill?</label>
       <input type="number" id="water-money"></input>
 
+      <label htmlFor="water-money">What is the average cost of a gallon of gas near you?</label>
+      <input type="number" id="gas-per-gallon-money"></input>
+
       <label htmlFor="water-money">What is your monthly gas bill?</label>
       <input type="number" id="gas-money"></input>
       <button id="form-submit-button" type="submit">CO2e Estimation</button>
