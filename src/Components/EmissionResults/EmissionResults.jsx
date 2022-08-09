@@ -77,7 +77,7 @@ const EmissionResults = (props) => {
             return (
                 <ComparisonGraph 
                     key={emission.emission_factor.activity_id}
-                    emission={emission.co2e}
+                    emission={(emission.co2e) * 12}
                     name={name[i]}
                     averageName={averageName[i]}
                     averageEmission={averageEmission[i]}
@@ -85,7 +85,7 @@ const EmissionResults = (props) => {
             )
         })}
         <ComparisonGraph 
-            emission={props.sumEmission}
+            emission={(props.sumEmission) * 12}
             name={"Total Results"}
             averageName={"Total Average Results"}
             averageEmission={10197.76}
