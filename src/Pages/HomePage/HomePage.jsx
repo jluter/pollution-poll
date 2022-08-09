@@ -17,7 +17,19 @@ class HomePage extends Component {
       <Header handleLogoClick={this.handleLogoClick}/>
       <main className="home-page">
         <h1>Pollution Poll <BiPoll /></h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque impedit possimus nostrum voluptatibus quisquam! Incidunt autem corrupti in, debitis impedit itaque quibusdam accusamus odit reprehenderit repellendus error ex neque fuga.</p>
+
+
+        <article>
+          <h2>What is it?</h2>
+        </article>
+        <article>
+          <h2>How does it work?</h2>
+        </article>
+        <article>
+          <h2>Why make it?</h2>
+        </article>
+
+
       </main>
       </>
     );
