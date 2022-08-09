@@ -1,5 +1,11 @@
 @use '../../styles/variables' as *;
 
 .graph-wrapper {
-    margin-bottom: 10rem;
+    margin-top: 10rem;
+    width: 80%;
+    height: 30rem;
+}
+
+.graph {
+    width: 10rem;
 }

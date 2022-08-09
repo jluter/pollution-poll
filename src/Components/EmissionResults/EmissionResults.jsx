@@ -45,30 +45,8 @@ const EmissionResults = (props) => {
 
     return (
       <main className="results-page">
-        {/* <h1>Your yearly emissions estimate: {formattedEmissions}kg CO2e</h1>
-            <h1>Estimated average US water bill: ${averageWaterBill}</h1> */}
-        <article className="compare">
-          <div>Title</div>
-          <div className="compare__chart-wrapper">
-            <section className="compare__chart">
-              <div>User</div>
-              <div>{emissionArray[0]}kg CO2e Energy</div>
-              <div>{emissionArray[1]}kg CO2e Water</div>
-              <div>{emissionArray[2]}kg CO2e Fuel</div>
-              <div>{formattedEmissions}kg CO2e</div>
-            </section>
-            <section className="compare__chart">
-              <div>Average</div>
-              <div>Average Energy: 5,308.56kg CO2e</div>
-              <div>Average Water: 289.2kg CO2e</div>
-              <div>Average Fuel: 4,600kg CO2e</div>
-              <div>Average Total: 10,197.76kg CO2e</div>
-            </section>
-          </div>
-        </article>
-
+        <div className='results-page__graph-wrapper'>
         {props.emissionArray.results.map((emission, i) => {
-
             const name = ["Electric Bill Results", "Water Bill Results", "Gas Bill Results"]
             
             const averageName = ["Electric Average Results", "Water Average Results", "Gas Average Results"]
@@ -90,6 +68,26 @@ const EmissionResults = (props) => {
             averageName={"Total Average Results"}
             averageEmission={10197.76}
         />
+        </div>
+        <article className="compare">
+          <div>Title</div>
+          <div className="compare__chart-wrapper">
+            <section className="compare__chart">
+              <div>User</div>
+              <div>{emissionArray[0]}kg CO2e Energy</div>
+              <div>{emissionArray[1]}kg CO2e Water</div>
+              <div>{emissionArray[2]}kg CO2e Fuel</div>
+              <div>{formattedEmissions}kg CO2e</div>
+            </section>
+            <section className="compare__chart">
+              <div>Average</div>
+              <div>Average Energy: 5,308.56kg CO2e</div>
+              <div>Average Water: 289.2kg CO2e</div>
+              <div>Average Fuel: 4,600kg CO2e</div>
+              <div>Average Total: 10,197.76kg CO2e</div>
+            </section>
+          </div>
+        </article>
 
         <Sources />
       </main>

@@ -27,7 +27,7 @@ class HomePage extends Component {
           <h2>How does it work?</h2>
           <p>You will need a few pieces of information to fill out the form: 
             <ul>
-              <li>Your source electricity. (Coal, wind, nuclear, etc...)</li>
+              <li>Your source of electricity. (Coal, wind, nuclear, etc...)</li>
               <li>Your monthly electric bill.</li>
               <li>Your monthly water bill.</li>
               <li>The average gas price per gallon in your area.</li>
