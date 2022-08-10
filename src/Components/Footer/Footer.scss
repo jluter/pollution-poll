@@ -1,0 +1,53 @@
+@use '../../styles/variables' as *;
+
+
+.footer {
+    background-color: $pp-green-dark;
+    margin: none;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    border-top: 2px solid black;
+}
+
+.sources-component {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-left: auto;
+    border-left: 2px solid black;
+    padding-left: 1rem;
+
+    &__list {
+        margin: 0;
+        padding: 1rem 0;
+        color: $pp-cream;
+    }
+
+    &__list-item {
+        height: 1.5rem;
+        list-style-type: none;
+
+        &--anchor {
+            // text-decoration: none;
+            color: $pp-cream;
+        }
+    }
+}
+
+.react-icons {
+    height: 3rem;
+    width: 3rem;
+    color: black;
+
+    &:hover {
+        color: $pp-cream;
+    }
+
+    &__wrapper {
+        display: flex;
+        gap: 1rem;
+        width: 50%;
+        justify-content: space-evenly;
+    }
+}

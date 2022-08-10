@@ -17,7 +17,9 @@ class HomePage extends Component {
       <>
       <Header handleLogoClick={this.handleLogoClick}/>
       <main className="home-page">
-      <h1>Pollution Poll <BiPoll /></h1>
+        <section className="home-page__hero">
+      <h1 className="home-page__hero-title">Pollution Poll <BiPoll /></h1>
+      </section>
       <section className="app-description-wrapper">
         <article className="app-description">
           <h2>What is it?</h2>

@@ -5,6 +5,8 @@
     flex-direction: column;
     align-items: center;
     padding: 0 2rem;
+    height: 100%;
+    justify-content: center;
 }
 
 .app-description-wrapper {
@@ -17,4 +19,8 @@
     flex-direction: column;
     align-items: center;
     border-bottom: 2px solid $pp-green-dark;
+
+    &:last-child {
+        border: none;
+    }
 }

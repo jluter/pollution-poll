@@ -5,6 +5,7 @@ import HomePage from "./Pages/HomePage/HomePage";
 // import Header from "./Components/Header/Header";
 import PollutionPollPage from "./Pages/PollutionPollPage/PollutionPollPage";
 import './App.scss';
+import Footer from './Components/Footer/Footer';
 
 class App extends Component {
 
@@ -23,6 +24,7 @@ class App extends Component {
           <Route path="/" exact component={HomePage}/>
           <Route path="/pollutionpoll" component={PollutionPollPage}/> 
         </Switch>
+        <Footer />
       </Router>
     );
   }

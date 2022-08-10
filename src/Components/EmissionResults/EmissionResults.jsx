@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './EmissionResults.scss';
-import Sources from '../Sources/Sources';
 import ComparisonGraph from '../ComparisonGraph/ComparisonGraph';
 import TotalResultsGraph from '../TotalResultsGraph/TotalResultsGraph';
 
@@ -89,7 +88,7 @@ const EmissionResults = (props) => {
           </div>
         </article>
         <TotalResultsGraph />
-        <Sources />
+        {/* <Sources /> */}
       </main>
     );
 };
