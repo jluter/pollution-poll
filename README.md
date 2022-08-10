@@ -50,10 +50,10 @@ https://github.com/jluter/pollution-poll-server
         [
             {
             emission_factor: {
-                uuid: this.state.energySourceId,
+                uuid: //EXAMPLE_ID,
                 },
             parameters: {
-                money: this.state.energyBill,
+                money: //EXAMPLE_NUMBER,
                 money_unit: "usd",
                 }
             },
@@ -62,7 +62,7 @@ https://github.com/jluter/pollution-poll-server
                 uuid: "1eed671c-7e3d-44e2-85f5-57dc86372cea",
                 },
             parameters: {
-                money: this.state.waterBill, 
+                money: 100, 
                 money_unit: "usd",
                 }
             }
