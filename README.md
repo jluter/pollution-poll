@@ -92,8 +92,8 @@ https://github.com/jluter/pollution-poll-server
 
 ## Screenshots
 
-![App Screenshot](https://imgur.com/9KrOCMg)
-![App Screenshot](https://imgur.com/V3Adj4r)
+![App Screenshot](https://imgur.com/9KrOCMg.jpeg)
+![App Screenshot](https://imgur.com/V3Adj4r.jpeg)
 
 
 
