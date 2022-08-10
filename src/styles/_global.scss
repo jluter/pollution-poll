@@ -1,27 +1,33 @@
 @use './variables' as *;
 @use './typography';
+@use './mixins';
 
 *, *::before, *::after {
     box-sizing: border-box;
 }
 
-#root {
-    height: 100vh;
-}
+// #root {
+//     height: 100%;
+
+//     // @include mixins.tablet {
+//     //     height: 100vh;
+//     // }
+// }
 
 body {
     margin: 0;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     font-family: 'Rubik';
     line-height: 1.8rem;
 }
 
 main {
-    background-color: $pp-cream;
+    background-color: $pp-brown;
     height: 100%;
 }
 
-p {
-    font-size: 1.2rem;
-}
+// p {
+//     font-size: 1.2rem;
+//     font-weight: 500;
+// }

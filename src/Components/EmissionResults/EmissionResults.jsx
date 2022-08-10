@@ -87,7 +87,9 @@ const EmissionResults = (props) => {
             </section>
           </div>
         </article>
-        <TotalResultsGraph />
+        <div className='total-results-graph-container'>
+        <TotalResultsGraph emissions={props.emissionArray} total={yearEmissions} />
+        </div>
         {/* <Sources /> */}
       </main>
     );

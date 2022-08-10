@@ -33,7 +33,7 @@ const ComparisonGraph = (props) => {
 
   return (
     <article className="graph-wrapper">
-      <ResponsiveContainer width="100%" height="100%">
+      <ResponsiveContainer >
         <BarChart
           className="graph"
           barCategoryGap={40}

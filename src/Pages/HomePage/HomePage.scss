@@ -1,17 +1,66 @@
 @use '../../styles/variables' as *;
+@use '../../styles/mixins';
 
 .home-page {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 2rem;
     height: 100%;
     justify-content: center;
+    font-size: 1.4rem;
+    
+    @include mixins.desktop {
+        padding-bottom: 30vh;
+    }
+    
+    &__hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        height: 20vh;
+        z-index: 0;
+    }
+
+    &__bg {
+        position: absolute;
+        left: 0;
+        top: -3;
+        object-fit: fill;
+        object-position: center;
+        width: 100%;
+        opacity: 0.5;
+        z-index: 0;
+        // background-image: url('../../assets/images/offshore-windfarm.jpg');
+    }
+
+    &__hero-title {
+        height: 3rem;
+        position: relative;
+        margin: 0 0 5.5rem 0;
+
+        @include mixins.desktop {
+            font-size: 3rem;
+        }
+    }
 }
 
 .app-description-wrapper {
     display: flex;
     flex-direction: column;
+    padding: 0 2rem;
+    border-radius: 10px;
+    border: 2px solid black;
+    margin: 1rem;
+    box-shadow: 0px 13px 19px -4px rgba(0,0,0,0.58);
+    background-color: $pp-cream;
+
+    @include mixins.desktop {
+        margin: 1rem 3rem;
+    }
+
 }
 
 .app-description {
@@ -23,4 +72,8 @@
     &:last-child {
         border: none;
     }
+}
+
+.how-paragraph {
+    margin-bottom: 1rem;
 }

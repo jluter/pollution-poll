@@ -108,8 +108,8 @@ class PollutionPollPage extends Component {
         return (
           <>
           <Header handleLogoClick={this.handleLogoClick}/>
-          <main className="home-page">
-            <h1>Pollution Poll</h1>
+          <main className="pollution-page">
+            <h1 className='pollution-page__title'>Pollution Poll</h1>
             {!this.state.sumEmissions && <MoneyInputForm 
               handleFormSubmit={this.handleFormSubmit}
               emissions={this.state.emissionArray} 

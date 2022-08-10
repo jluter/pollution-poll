@@ -1,7 +1,19 @@
 @use '../../styles/variables' as *;
+@use '../../styles/mixins';
 
 .total-results-wrapper {
     display: none;
     width: 100%;
     height: 100%;
+    background-color: $pp-cream;
+    margin-top: 5rem;
+    border-radius: 10px;
+
+    @include mixins.tablet {
+        display: flex;
+        min-width: 750px;
+        border: 1px solid black;
+        box-shadow: 0px 13px 19px -4px rgba(0,0,0,0.58);
+
+    }
 }

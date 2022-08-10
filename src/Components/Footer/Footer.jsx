@@ -17,7 +17,7 @@ const Footer = () => {
         <div className="react-icons__wrapper">
           <a href="https://github.com/jluter" target="_blank" rel="noopener noreferrer"><BsGithub/></a>
           <a href="https://www.linkedin.com/in/jakob-luter/" target="_blank" rel="noopener noreferrer"><BsLinkedin/></a>
-          <a href="https://www.c2es.org/" target="_blank" rel="noopener noreferrer"><TbSeeding/></a>
+          <a href="https://news.climate.columbia.edu/2018/12/27/35-ways-reduce-carbon-footprint/" target="_blank" rel="noopener noreferrer"><TbSeeding/></a>
         </div>
         <section className="sources-component">
           <ul className="sources-component__list">

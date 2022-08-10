@@ -1,7 +1,51 @@
 @use '../../styles/variables' as *;
+@use '../../styles/typography' as *;
 
 .money-input-form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    border: 1px solid black;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: $pp-cream;
+    margin: 1rem;
+    box-shadow: 0px 10px 13px -7px #000000, 0px 18px 40px -10px rgba(0,0,0,0.25); 
+
+    &__label {
+        text-align: center;
+        font-size: 1.2rem;
+        padding-top: 2rem;
+        border-top: 5px solid $pp-green-dark;
+
+        &:first-child {
+            border-top: none;
+            padding-top: 0;
+        }
+    }
+
+    &__input {
+        border: 1px solid $pp-green-dark;
+        border-radius: 5px;
+        height: 2.2rem;
+        padding-left: 0.5rem;
+        margin-bottom: 2rem;
+        font-family: 'Rubik';
+        font-size: 1rem;
+    }
+
+    &__button {
+        border: none;
+        background-color: $pp-green-light;
+        border-radius: 5px;
+        height: 5rem;
+        font-size: 2rem;
+        box-shadow: 0px 10px 13px -7px #000000, 0px 18px 40px -10px rgba(0,0,0,0.25); 
+        margin-bottom: 1rem;
+
+        &:hover {
+            background-color: $pp-green-dark;
+            color: $pp-cream;
+        }
+    }
 }

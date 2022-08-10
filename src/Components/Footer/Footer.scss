@@ -1,5 +1,5 @@
 @use '../../styles/variables' as *;
-
+@use '../../styles/mixins';
 
 .footer {
     background-color: $pp-green-dark;
@@ -17,6 +17,10 @@
     margin-left: auto;
     border-left: 2px solid black;
     padding-left: 1rem;
+
+    @include mixins.tablet {
+        margin: 0;
+    }
 
     &__list {
         margin: 0;
@@ -40,6 +44,11 @@
     width: 3rem;
     color: black;
 
+    @include mixins.tablet {
+        height: 5rem;
+        width: 5rem;
+    }
+
     &:hover {
         color: $pp-cream;
     }
@@ -49,5 +58,11 @@
         gap: 1rem;
         width: 50%;
         justify-content: space-evenly;
+
+        @include mixins.tablet {
+            justify-content: center;
+            margin: 0 auto;
+            gap: 5rem;
+        }
     }
 }
