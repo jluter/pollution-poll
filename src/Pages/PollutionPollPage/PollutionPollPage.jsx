@@ -21,6 +21,7 @@ class PollutionPollPage extends Component {
         axios
         .get("http://localhost:4444/activity")
         .then((response) => {
+          console.log(response)
           const energyActivity = response.data.find(activity => activity.activityName === "energy")
     
     
