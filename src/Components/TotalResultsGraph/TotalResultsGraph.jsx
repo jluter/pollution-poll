@@ -9,27 +9,23 @@ const TotalResultsGraph = (props) => {
     const data = [
       {
         name: "Electric Results",
-        Yours: props.emissions.results[0].co2e.toFixed(2),
+        Yours: (props.emissions.results[0].co2e * 12).toFixed(2),
         Average: 5308,
-        amt: 2400,
-      },
+        amt: 2400,      },
       {
         name: "Water Results",
-        Yours: props.emissions.results[1].co2e.toFixed(2),
-        Average: 298,
-        amt: 2000,
+        Yours: (props.emissions.results[1].co2e * 12).toFixed(2),
+        Average: 289,
       },
       {
         name: "Fuel Results",
-        Yours: props.emissions.results[2].co2e.toFixed(2),
+        Yours: (props.emissions.results[2].co2e * 12).toFixed(2),
         Average: 4600,
-        amt: 2181,
       },
       {
         name: "Total Results",
         Yours: props.total,
         Average: 10197,
-        amt: 2500,
       },
     ];
 

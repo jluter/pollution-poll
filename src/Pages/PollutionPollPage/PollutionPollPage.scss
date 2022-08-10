@@ -13,8 +13,8 @@
     }
     
     @include mixins.desktop {
-        padding-bottom: 30vh;
         padding: 0 2rem;
+        padding-bottom: 30vh;
     }
 
     &__title {
