@@ -88,3 +88,11 @@ https://github.com/jluter/pollution-poll-server
 
 - [Jakob Luter](https://www.linkedin.com/in/jakob-luter/)
 
+
+
+## Screenshots
+
+![App Screenshot]('./src/assets/images/form-screenshot.png')
+
+
+
