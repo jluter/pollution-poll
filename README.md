@@ -3,10 +3,6 @@
 
 Pollution Poll: Increasing climate change awareness by visualizing portions of a user's carbon footprint.
 
-## Documentation
-
-[Documentation](https://linktodocumentation)
-
 
 ## Installation
 
