@@ -10,10 +10,14 @@ body {
     height: 100%;
     width: 100%;
     font-family: 'Rubik';
-    line-height: 1.5rem;
+    line-height: 1.8rem;
 }
 
 main {
     background-color: $pp-cream;
     height: 100%;
+}
+
+p {
+    font-size: 1.2rem;
 }

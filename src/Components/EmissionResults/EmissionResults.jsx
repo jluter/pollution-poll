@@ -3,6 +3,7 @@ import axios from 'axios';
 import './EmissionResults.scss';
 import Sources from '../Sources/Sources';
 import ComparisonGraph from '../ComparisonGraph/ComparisonGraph';
+import TotalResultsGraph from '../TotalResultsGraph/TotalResultsGraph';
 
 const EmissionResults = (props) => {
 
@@ -70,25 +71,24 @@ const EmissionResults = (props) => {
         />
         </div>
         <article className="compare">
-          <div>Title</div>
           <div className="compare__chart-wrapper">
             <section className="compare__chart">
-              <div>User</div>
-              <div>{emissionArray[0]}kg CO2e Energy</div>
-              <div>{emissionArray[1]}kg CO2e Water</div>
-              <div>{emissionArray[2]}kg CO2e Fuel</div>
-              <div>{formattedEmissions}kg CO2e</div>
+              <div className='compare__item compare__item--title'>Your Results</div>
+              <div className='compare__item'>{emissionArray[0]}kg CO2e Energy</div>
+              <div className='compare__item'>{emissionArray[1]}kg CO2e Water</div>
+              <div className='compare__item'>{emissionArray[2]}kg CO2e Fuel</div>
+              <div className='compare__item'>{formattedEmissions}kg CO2e Total</div>
             </section>
             <section className="compare__chart">
-              <div>Average</div>
-              <div>Average Energy: 5,308.56kg CO2e</div>
-              <div>Average Water: 289.2kg CO2e</div>
-              <div>Average Fuel: 4,600kg CO2e</div>
-              <div>Average Total: 10,197.76kg CO2e</div>
+              <div className='compare__item compare__item--title'>U.S. Average</div>
+              <div className='compare__item'>Average Energy: 5,308.56kg CO2e</div>
+              <div className='compare__item'>Average Water: 289.2kg CO2e</div>
+              <div className='compare__item'>Average Fuel: 4,600kg CO2e</div>
+              <div className='compare__item'>Average Total: 10,197.76kg CO2e</div>
             </section>
           </div>
         </article>
-
+        <TotalResultsGraph />
         <Sources />
       </main>
     );
