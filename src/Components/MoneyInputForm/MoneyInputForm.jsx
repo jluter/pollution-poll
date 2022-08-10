@@ -9,7 +9,6 @@ const MoneyInputForm = (props) => {
     <form
       onSubmit={(event) => {
         event.preventDefault();
-        console.log(event)
 
         const estimationBillArray = [];
 

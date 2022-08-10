@@ -5,7 +5,6 @@ import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 
 const TotalResultsGraph = (props) => {
 
-    console.log(props)
     const data = [
       {
         name: "Electric Results",

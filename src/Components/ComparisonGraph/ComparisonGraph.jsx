@@ -14,12 +14,11 @@ import {
 
 
 const ComparisonGraph = (props) => {
-  console.log(props);
 
   const inputNumber = props.emission.toFixed(2);
   const averageNumber = props.averageEmission.toFixed(2);
 
-  const renderCustomBarLabel = ({ payload, x, y, width, height, value }) => {
+  const renderCustomBarLabel = ({ x, y, width, value }) => {
     return (
       <text
         x={x + width / 2}

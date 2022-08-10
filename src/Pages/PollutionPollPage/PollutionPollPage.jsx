@@ -101,7 +101,6 @@ class PollutionPollPage extends Component {
       }
 
       handleLogoClick = () => {
-        console.log(this.props)
         this.props.history.push("/")
       }
       render() {

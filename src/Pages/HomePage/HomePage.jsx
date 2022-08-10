@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-// import axios from "axios";
 import "./HomePage.scss";
 import Header from "../../Components/Header/Header";
 import {BiPoll}  from 'react-icons/bi';
